@@ -4,7 +4,7 @@ import numpy as np
 
 import torch
 
-class RandomIdentitySampler(object):
+class RandomIdentitySampler(torch.utils.data.sampler.Sampler):
     """
     Randomly sample N identities, then for each identity,
     randomly sample K instances, therefore batch size is N*K.
